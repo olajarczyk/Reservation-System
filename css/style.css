@@ -1,0 +1,18 @@
+header {
+    height: 100vh;
+    background-image:url('../assets/header.jpg');
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    background: transparent;
+    border-bottom: 1px solid white;
+}
+
+header button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    font-size: 25px;
+}

@@ -3,37 +3,108 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Reservation system</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!--header-->
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark pl-4">
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <li class="nav-item pr-3">
+                    <a class="nav-link" href="#">HOME</a>
+                  </li>
+                  <li class="nav-item pr-3">
+                    <a class="nav-link" href="#">SAMOCHODY</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="#">ZAREZERWUJ</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
+          <div class="container h-75 d-flex align-items-center">
+            <div class="row">
+              <div class= "col-12">
+                <h1 class="text-white font-weight-bold">WYPOŻYCZALNIA SAMOCHODÓW</h1>
+              </div>
+              <div class="col-12">
+                <div class="row mt-5 d-flex">
+                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold">OFERTA</button>
+                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold">REZERWACJA</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </header>
     <!--header-->
+    <!--avalible-->
+      <section id="avalible">
+        <div class="container-fluid p-5">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center p-5">DOSTĘPNE SAMOCHODY</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+              <div class="card">
+                <img src="assets/kuga.webp" class="card-img-top" alt="" srcset="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Ford Kuga</h5>
+                  <p class="text-center">1.5 EcoBoost 150KM M6 Titanium</p>
+                  <p class="text-center font-weight-bold">50 zł / h</p>
+                  <a href="" class="btn btn-primary col-12">REZERWUJ</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+              <div class="card">
+                <img src="assets/alfa.webp" class="card-img-top" alt="" srcset="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Alfa Romeo</h5>
+                  <p class="text-center">2.0 Turbo 280KM Sprint A8</p>
+                  <p class="text-center font-weight-bold">70 zł / h</p>
+                  <a href="" class="btn btn-primary col-12">REZERWUJ</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+              <div class="card">
+                <img src="assets/bmw.webp" class="card-img-top" alt="" srcset="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">BMW 330</h5>
+                  <p class="text-center">hybryda 292KM M-Sport A8 kombi</p>
+                  <p class="text-center font-weight-bold">80 zł / h</p>
+                  <a href="" class="btn btn-primary col-12">REZERWUJ</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+              <div class="card">
+                <img src="assets/cupra.webp" class="card-img-top" alt="" srcset="">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Cupra Formentor</h5>
+                  <p class="text-center">1.5 TSI 150 KM A7 benzyna</p>
+                  <p class="text-center font-weight-bold">99 zł / h</p>
+                  <a href="" class="btn btn-primary col-12">REZERWUJ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!--avalible-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
