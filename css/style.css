@@ -16,3 +16,46 @@ header button {
     padding: 5px;
     font-size: 25px;
 }
+
+.card img {
+    height: 250px;
+}
+
+.card-body{
+    height: 300px;
+    padding-top: 30px;
+}
+
+.btn-primary{
+    margin-top: 80px;
+}
+.btn-danger{
+    margin-top: 80px;
+}
+
+.card-title{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#reservation{
+    background-image: url('../assets/reservation.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#avalible{
+    height:100vh;
+}
+#unavalible{
+    height:100vh;
+}
+
+#reservation h1{
+    color: white;
+}
+
+
+
