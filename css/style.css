@@ -1,6 +1,6 @@
 header {
     height: 100vh;
-    background-image:url('../assets/header.jpg');
+    background-image:url('../assets/reservation.webp');
     background-position: center;
     background-size: cover;
 }
@@ -39,7 +39,7 @@ header button {
 }
 
 #reservation{
-    background-image: url('../assets/reservation.jpg');
+    background-image: url('../assets/header.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,6 +49,12 @@ header button {
 #reservation h1{
     color: white;
 }
+
+#reservation label {
+    font-weight: 400;
+}
+
+
 
 
 
