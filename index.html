@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reservation system</title>
+    <title>Wypożyczalnia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -36,12 +36,12 @@
           <div class="container h-75 d-flex align-items-center">
             <div class="row">
               <div class= "col-12">
-                <h1 class="text-white font-weight-bold">WYPOŻYCZALNIA SAMOCHODÓW</h1>
+                <h1 class="text-white font-weight-bold font-size: 60px; font-weight: 800;">WYPOŻYCZALNIA SAMOCHODÓW</h1>
               </div>
               <div class="col-12">
                 <div class="row mt-5 d-flex">
-                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold">OFERTA</button>
-                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold">REZERWACJA</button>
+                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold" onclick="smoothScroll('#avalible')">OFERTA</button>
+                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold" onclick="smoothScroll('#reservation')">REZERWACJA</button>
                 </div>
               </div>
             </div>
@@ -174,7 +174,7 @@
         <h1 class="text-center p-5 font-weight-bold">ZAREZERWUJ</h1>
         <div class="row">
           <div class="col-12 d-flex justify-content-center p-5 text-white">
-            <form action="" method="POST">
+            <form action="" method="POST" style="background-color: rgba(255,255,255,0.3); padding: 20px; border-radius: 5px;">
               <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
@@ -232,6 +232,7 @@
         </div>
       </div>
     </section>
+    <button onclick="smoothScroll('header')" id="up-button"></button>
     <!--reservation form-->
     <footer>
       <div class="col-12" style="background: transparent; color: black;">

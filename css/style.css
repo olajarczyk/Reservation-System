@@ -54,6 +54,33 @@ header button {
     font-weight: 400;
 }
 
+nav li{
+    cursor: pointer;
+    color:white;
+    font-size: 16px;
+}
+header button:hover{
+    background-color: rgba(255,255,255,0.3);
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#up-button{
+    display: none;
+    position:fixed;
+    right:10px;
+    bottom:20px;
+    z-index:60;
+    outline:none;
+    background-image: url(../assets/arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40px;
+    width:40px;
+    cursor: pointer;
+    background-size:cover;
+    background-color: transparent;
+    border: none;
+}
 
 
 
