@@ -1,3 +1,6 @@
+body{
+    font-family: Comfortaa;
+}
 header {
     height: 100vh;
     background-image:url('../assets/reservation.webp');
@@ -6,7 +9,6 @@ header {
 }
 nav{
     background: transparent;
-    border-bottom: 1px solid white;
 }
 
 header button {
@@ -28,9 +30,16 @@ header button {
 
 .btn-primary{
     margin-top: 80px;
+    background-color: #326db6;
+    border:none;
 }
 .btn-danger{
     margin-top: 80px;
+}
+.btn:disabled{
+    background-color: #990033;
+    opacity: 1;
+    border:none;
 }
 
 .card-title{
@@ -56,8 +65,16 @@ header button {
 
 nav li{
     cursor: pointer;
+}
+.nav-link{
     color:white;
     font-size: 16px;
+    font-weight: bold;
+}
+.navbar-nav{
+padding: 20px;
+padding-top: 0px;
+
 }
 header button:hover{
     background-color: rgba(255,255,255,0.3);
@@ -68,7 +85,7 @@ header button:hover{
     display: none;
     position:fixed;
     right:10px;
-    bottom:20px;
+    bottom:5px;
     z-index:60;
     outline:none;
     background-image: url(../assets/arrow.png);
@@ -81,6 +98,10 @@ header button:hover{
     background-color: transparent;
     border: none;
 }
+
+
+
+
 
 
 
