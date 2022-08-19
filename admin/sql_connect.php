@@ -4,7 +4,7 @@ $user = 'root';
 $password ='';
 $db_name='rental';
 
-$mysqli = new $mysqli($host, $user, $password, $db_name);
+$mysqli = new mysqli($host, $user, $password, $db_name);
 $mysqli->query("SET NAMES 'utf8' COLLATE 'utf8_polish_ci'");
 $mysqli->query("SET CHARSET utf8");
 

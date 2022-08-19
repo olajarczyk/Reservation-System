@@ -14,10 +14,10 @@ if($login =="" || $password == ""){
     die('Login lub hasło są puste!');
 }
 
-$sql = "SELECT password FROM users WHERE name = ?";
+$sql = "SELECT password FROM users WHERE login = ?";
 
 if($statement = $mysqli -> prepare($sql)){
-    if($statement=$mysqli->bind_param('s', $nick)){
+    if($statement -> bind_param('s', $login)){
         $statement -> execute();
         $result = $statement->get_result();
         $row = $result ->fetch_row();
@@ -30,6 +30,10 @@ if($statement = $mysqli -> prepare($sql)){
             die('Niepoprawne hasło!');
         }
     }
+
+    $mysqli->close();
+} else {
+    die('Zapytanie niepoprawne');
 }
 
 }else {

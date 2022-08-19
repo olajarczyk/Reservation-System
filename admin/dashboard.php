@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['isLogged'])|| $_SESSION['isLogged']!== true){
+  die('Dostęp zabroniony!');
+}
+?>
+
 <!doctype html>
 <html lang="pl">
   <head>
@@ -14,7 +21,7 @@
     <div class="col-12">
         <h1 class="text-center font-weight-bold p-5">REZERWACJE</h1>
         <div class="text-center">
-            <a href="" class="m-2">POWRÓT</a> | <a href="" class="m-2">WYLOGUJ</a>
+            <a href="../index.php" class="m-2">POWRÓT</a> | <a href="logout.php" class="m-2">WYLOGUJ</a>
         </div>
     </div>
     <div class="container mt-4">
