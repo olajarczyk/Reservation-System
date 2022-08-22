@@ -109,6 +109,10 @@ header button:hover{
   }
 }
 
+.navbar-toggler{
+    border: none;
+}
+
 
 
 
