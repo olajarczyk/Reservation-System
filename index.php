@@ -120,7 +120,7 @@ require("functions.php");
         <h1 class="text-center p-5 font-weight-bold">REZERWACJA</h1>
         <div class="row">
           <div class="col-12 d-flex justify-content-center p-5 text-white">
-            <form action="" method="POST" style="background-color: rgba(255,255,255,0.3); padding: 20px; border-radius: 5px;">
+            <form action="reserve.php" method="POST" style="background-color: rgba(255,255,255,0.3); padding: 20px; border-radius: 5px;">
               <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
@@ -137,7 +137,7 @@ require("functions.php");
             </div>
               <div class="form-group">
                 <label for="phone">Telefon</label>
-                <input type="tel" class="form-control" placeholder="Podaj numer telefonu"required>
+                <input type="tel" name="phone" class="form-control" placeholder="Podaj numer telefonu"required>
               </div>
               <div class="form-group">
                 <label for="car">Samochód</label>
@@ -155,7 +155,7 @@ require("functions.php");
                 <div class="col-sm-5">
                   <div class="form-group">
                     <label for="date">Termin</label>
-                    <input type="date" class="form-control" name="date" id="date" required>
+                    <input type="datetime-local" class="form-control" name="date" id="date" required>
                   </div>
                 </div>
                 <div class="col-sm-7">
@@ -174,6 +174,9 @@ require("functions.php");
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="col-12 mt-4">
+                <input type="submit" value="REZERWUJ" class="btn btn-danger col-12" >
               </div>
             </form>
           </div>
