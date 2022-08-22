@@ -1,3 +1,5 @@
+
+
 body{
     font-family: Comfortaa;
 }
@@ -29,13 +31,15 @@ header button {
 }
 
 .btn-primary{
-    margin-top: 80px;
     background-color: #326db6;
     border:none;
+    margin-top: 20px;
 }
+
 .btn-danger{
-    margin-top: 80px;
+    margin-top: 20px;
 }
+
 .btn:disabled{
     background-color: #990033;
     opacity: 1;
@@ -99,7 +103,11 @@ header button:hover{
     border: none;
 }
 
-
+@media screen and (max-width: 600px) {
+  .special-form {
+   margin-top: -80px;
+  }
+}
 
 
 

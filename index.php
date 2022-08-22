@@ -46,8 +46,8 @@ require("functions.php");
               </div>
               <div class="col-12">
                 <div class="row mt-5 d-flex">
-                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold" onclick="smoothScroll('#avalible')">OFERTA</button>
-                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold" onclick="smoothScroll('#reservation')">REZERWACJA</button>
+                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold" style= "width:325px;" onclick="smoothScroll('#avalible')">OFERTA</button>
+                  <button class="col-lg-3 col-md-6 col-sm-12 m-4 font-weight-bold" style= "width:325px;" onclick="smoothScroll('#reservation')">REZERWACJA</button>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@ require("functions.php");
     <!--header-->
     <!--avalible-->
       <section id="avalible">
-        <div class="container-fluid p-5">
+        <div class="container p-5">
           <div class="row">
             <div class="col-12">
               <h1 class="text-center p-5">DOSTĘPNE SAMOCHODY</h1>
@@ -67,13 +67,13 @@ require("functions.php");
               $rows = get_cars('avalible');
               foreach($rows as $r){
                 echo '<div class="col-lg-3 col-md-6 col-sm-12 mt-3">';
-                echo '<div class="card">';
+                echo '<div class="card" style = "max-height: 510px; padding-bottom:200px;">';
                 echo '<img src = "assets/'.$r['photo_url']. '" class="card-img-top" alt="car">';
                 echo '<div class="card-body">';
-                echo '<h5 class="card-title text-center">'.$r['name'].'</h5>';
-                echo '<p class="text-center">'.$r['type'].'</p>';
-                echo '<p class="text-center font-weight-bold">'.$r['price'].' zł / h</p>';
-                echo '<button href="" class="btn btn-primary col-12" onclick="reserve('.$r['id'].')">REZERWUJ</button>';
+                echo '<h5 class="card-title text-center" style="height: 80px; margin-bottom: 20px;">'.$r['name'].'</h5>';
+                echo '<p class="text-center" style="height: 40px; margin-top: 30px;">'.$r['type'].'</p>';
+                echo '<p class="text-center font-weight-bold" style="height: 40px;">'.$r['price'].' zł / h</p>';
+                echo '<button href="" class="btn btn-primary col-12"  onclick="reserve('.$r['id'].')">REZERWUJ</button>';
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';
@@ -85,7 +85,7 @@ require("functions.php");
     <!--avalible-->
     <!--unvalible-->
     <section id="unvalible">
-      <div class="container-fluid p-5">
+      <div class="container p-5">
         <div class="row">
           <div class="col-12">
             <h1 class="text-center p-5">OBECNIE ZAREZERWOWANE</h1>
@@ -96,13 +96,13 @@ require("functions.php");
           <?php
               $rows = get_cars('unvalible');
               foreach($rows as $r){
-                echo '<div class="col-lg-3 col-md-6 col-sm-12 mt-3">';
-                echo '<div class="card">';
+                echo '<div class="col-lg-3 col-md-6 col-sm-12 mt-3" >';
+                echo '<div class="card" style = "align-items: center; max-height: 510px; padding-bottom:200px;">';
                 echo '<img src = "assets/'.$r['photo_url']. '" class="card-img-top" alt="car">';
                 echo '<div class="card-body">';
-                echo '<h5 class="card-title text-center">'.$r['name'].'</h5>';
-                echo '<p class="text-center">'.$r['type'].'</p>';
-                echo '<p class="text-center font-weight-bold">'.$r['price'].' zł / h</p>';
+                echo '<h5 class="card-title text-center" style="height: 80px; margin-bottom: 20px;">'.$r['name'].'</h5>';
+                echo '<p class="text-center" style="height: 40px;">'.$r['type'].'</p>';
+                echo '<p class="text-center font-weight-bold" style="height: 40px;">'.$r['price'].' zł / h</p>';
                 echo '<button href="" class="btn btn-danger col-12" disabled>DOSTĘPNY OD '.$r['to_date'].'</button>';
                 echo '</div>';
                 echo '</div>';
@@ -119,7 +119,7 @@ require("functions.php");
       <div class="container-fluid">
         <h1 class="text-center p-5 font-weight-bold">REZERWACJA</h1>
         <div class="row">
-          <div class="col-12 d-flex justify-content-center p-5 text-white">
+          <div class="col-12 d-flex justify-content-center p-5 text-white special-form">
             <form action="reserve.php" method="POST" style="background-color: rgba(255,255,255,0.3); padding: 20px; border-radius: 5px;">
               <div class="row">
               <div class="col-sm-6">
@@ -186,7 +186,7 @@ require("functions.php");
     <button onclick="smoothScroll('header')" id="up-button"></button>
     <!--reservation form-->
     <footer>
-      <div class="col-12" style="background: transparent; color: black;">
+      <div class="col-12" style="background: white; color: black;">
         <h6 class="text-center font-weight-bold p-2">COPYRIGHT ALEKSANDRA JARCZYK</h6>
       </div>
     </footer>
