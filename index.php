@@ -1,3 +1,6 @@
+<?php
+require("functions.php");
+?>
 <!doctype html>
 <html lang="pl">
   <head>
@@ -60,53 +63,22 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-              <div class="card">
-                <img src="assets/ford.webp" class="card-img-top" alt="" srcset="">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Ford Fiesta</h5>
-                  <p class="text-center">1.0 Ecoboost 100KM Titanium M6 hatchback</p>
-                  <p class="text-center font-weight-bold">50 zł / h</p>
-                  <button href="" class="btn btn-primary col-12">REZERWUJ</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-              <div class="card">
-                <img src="assets/alfa.webp" class="card-img-top" alt="" srcset="">
-                <div class="card-body">
-                  <h5 class="card-title text-center ">Alfa Romeo</h5>
-                  <p class="text-center ">2.0 Turbo 280KM Sprint A8</p>
-                  <p class="text-center font-weight-bold ">70 zł / h</p>
-                  <button href="" class="btn btn-primary col-12">REZERWUJ</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-              <div class="card">
-                <img src="assets/bmw.webp" class="card-img-top" alt="" srcset="">
-                <div class="card-body">
-                  <h5 class="card-title text-center">BMW 330</h5>
-                  <p class="text-center">hybryda 292KM M-Sport A8 kombi</p>
-                  <p class="text-center font-weight-bold">80 zł / h</p>
-                  <button href="" class="btn btn-primary col-12">REZERWUJ</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-              <div class="card">
-                <img src="assets/cupra.webp" class="card-img-top" alt="" srcset="">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Cupra Formentor</h5>
-                  <p class="text-center">1.5 TSI 150 KM A7 benzyna</p>
-                  <p class="text-center font-weight-bold">99 zł / h</p>
-                  <button href="" class="btn btn-primary col-12">REZERWUJ</button>
-                </div>
-              </div>
-            </div>
+            <?php
+              $rows = get_cars('avalible');
+              foreach($rows as $r){
+                echo '<div class="col-lg-3 col-md-6 col-sm-12 mt-3">';
+                echo '<div class="card">';
+                echo '<img src = "assets/'.$r['photo_url']. '" class="card-img-top" alt="car">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title text-center">'.$r['name'].'</h5>';
+                echo '<p class="text-center">'.$r['type'].'</p>';
+                echo '<p class="text-center font-weight-bold">'.$r['price'].' zł / h</p>';
+                echo '<button href="" class="btn btn-primary col-12" onclick="reserve('.$r['id'].')">REZERWUJ</button>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+              }
+            ?>
           </div>
         </div>
       </section>
@@ -120,53 +92,24 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-            <div class="card">
-              <img src="assets/focus.webp" class="card-img-top" alt="" srcset="">
-              <div class="card-body">
-                <h5 class="card-title text-center">Ford Focus</h5>
-                <p class="text-center">1.0 EcoBoost 125KM M6 Titanium kombi</p>
-                <p class="text-center font-weight-bold">100 zł / h</p>
-                <button href="" class="btn btn-danger col-12" disabled>DOSTĘPNY OD 25.07</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-            <div class="card">
-              <img src="assets/seat.webp" class="card-img-top" alt="" srcset="">
-              <div class="card-body">
-                <h5 class="card-title text-center">Seat Arona</h5>
-                <p class="text-center">Xperience 1.0 TSI 110KM A7 benzyna</p>
-                <p class="text-center font-weight-bold">170 zł / h</p>
-                <button href="" class="btn btn-danger col-12" disabled>DOSTĘPNY OD 05.08</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-            <div class="card">
-              <img src="assets/mercedes.webp" class="card-img-top" alt="" srcset="">
-              <div class="card-body">
-                <h5 class="card-title text-center">Mercedes E-klasa</h5>
-                <p class="text-center">hybryda 292KM M-Sport A8 kombi</p>
-                <p class="text-center font-weight-bold">80 zł / h</p>
-                <button href="" class="btn btn-danger col-12" disabled>DOSTĘPNY OD 01.09</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
-            <div class="card">
-              <img src="assets/huindai.webp" class="card-img-top" alt="" srcset="">
-              <div class="card-body">
-                <h5 class="card-title text-center">Hyundai i30</h5>
-                <p class="text-center">E220d 4MATIC A9 AMG diesel 194KM</p>
-                <p class="text-center font-weight-bold">150 zł / h</p>
-                <button href="" class="btn btn-danger col-12" disabled>DOSTĘPNY OD 21.07</button>
-              </div>
-            </div>
-          </div>
+            
+          <?php
+              $rows = get_cars('unvalible');
+              foreach($rows as $r){
+                echo '<div class="col-lg-3 col-md-6 col-sm-12 mt-3">';
+                echo '<div class="card">';
+                echo '<img src = "assets/'.$r['photo_url']. '" class="card-img-top" alt="car">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title text-center">'.$r['name'].'</h5>';
+                echo '<p class="text-center">'.$r['type'].'</p>';
+                echo '<p class="text-center font-weight-bold">'.$r['price'].' zł / h</p>';
+                echo '<button href="" class="btn btn-danger col-12" disabled>DOSTĘPNY OD '.$r['to_date'].'</button>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+              }
+            ?>
+          
         </div>
       </div>
     </section>
@@ -199,11 +142,13 @@
               <div class="form-group">
                 <label for="car">Samochód</label>
                 <select name="car"class="form-control" id="car" required>
-                  <option value="" disabled selected>Wybierz samochód</option>
-                  <option value="1">Ford Focus</option>
-                  <option value="2">Ford Kuga</option>
-                  <option value="3">Mercedes E-klasa</option>
-                  <option value="4">Hyundai i-30</option>
+                <option value="" disabled selected>Wybierz samochód</option>
+                  <?php
+                  $rows = get_cars('select');
+                    foreach($rows as $r){
+                      echo '<option value = "'.$r['id'].'">'.$r['name'].'</option>';
+                    }
+                  ?>
                 </select>
                 </div>
                 <div class="row">
@@ -250,5 +195,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>
 </html>
-<?php
-?>

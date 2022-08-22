@@ -20,3 +20,14 @@ function scroll(){
 function scrollTop(){
     smoothScroll('header');
 }
+
+function reserve(car){
+var select = document.getElementById('car');
+var options_selected = select.querySelectorAll('option[selected');
+options_selected.forEach(function(option){
+    option.removeAttribute("selected");
+});
+var option = select.querySelector('option[value="'+car+'"]');
+option.setAttribute("selected", "selected");
+smoothScroll('#reservation');
+}

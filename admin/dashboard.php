@@ -1,5 +1,6 @@
 <?php
 session_start();
+require("../functions.php");
 if(!isset($_SESSION['isLogged'])|| $_SESSION['isLogged']!== true){
   die('Dostęp zabroniony!');
 }
@@ -29,9 +30,6 @@ if(!isset($_SESSION['isLogged'])|| $_SESSION['isLogged']!== true){
             <table class="table">
                 <thead class="thead-dark">
                   <tr>
-                    <th scope="col">
-
-                    </th>
                     <th scope="col">Samochód</th>
                     <th scope="col">Klient</th>
                     <th scope="col">Koszt</th>
@@ -39,24 +37,19 @@ if(!isset($_SESSION['isLogged'])|| $_SESSION['isLogged']!== true){
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
+                  <?php
+                  $rows = generate_dashboard();
+
+                  for($i=0;$i<count($rows); $i++){
+                    echo '<tr>';
+                    echo '<td>'.$rows[$i]['name'].'</td>';
+                    echo '<td>'.$rows[$i]['surname'].'</td>';
+                    echo '<td>'.$rows[$i]['cost'].'</td>';
+                    echo '<td>'.$rows[$i]['to_date'].'</td>';
+                    echo '</tr>';
+                  }
+                  ?>
+                  
                 </tbody>
               </table>
         </div>
